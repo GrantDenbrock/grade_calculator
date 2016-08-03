@@ -1,29 +1,25 @@
-#grade_calculator_2.py
-class Grades:
-	Weights = {}
-	Exam = []
-	Homework = []
-	add_Homework(earned,possible)
-	add_Exam(earned,possible)
-	report_scores()
-	
-object Homework:
-	Name = None
-	Possible = int
-	Earned = int
-	Description = None
-	
-object Exam:
-	Name = None
-	Possible = int
-	Earned = int
-	Description = None
-	
-# creating: add_homework() #
-def add_Homework(Earned,Possible,Name=None,Description=None):
-	self.Homework.append(Homework(Earned,Possible,Name=Name,Description=Description))
-	
+#grade_calculator
 
+class Book(object):
 	
-
+	cat = {"homework" : .75 ,
+		   "exam" : .25,
+		   }
+	
+	def __init__(self):
+		self.homework = []
+		self.exam = []
+	
+	def add_exam(self, earned, possible, extra_credit = False):
+		if extra_credit == False:
+			if earned > possible:
+				raise ValueError
+		self.exam.append((earned, possible))
+		
+	def add_homework(self, earned, possible, extra_credit = False):
+		if extra_credit == False:
+			if earned > possible:
+				raise ValueError
+		self.homework.append((earned, possible))
+		
 	
