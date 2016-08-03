@@ -34,5 +34,6 @@ def test_creation():
 	assert grade.homework == []
 	assert grade.exam == []
 	
-
-	
+def test_calculate_grade():
+	grade = gc.Book()
+	assert grade.calculate_grade() == .50

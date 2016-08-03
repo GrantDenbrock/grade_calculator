@@ -21,5 +21,8 @@ class Book(object):
 			if earned > possible:
 				raise ValueError
 		self.homework.append((earned, possible))
+	
+	def calculate_grade(self):
+		raise NotImplementedError
 		
 	
