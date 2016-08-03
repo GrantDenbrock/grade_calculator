@@ -13,4 +13,7 @@ install:
     
 script:
   - py.test
+  
+notifications:
+  email: false
       
